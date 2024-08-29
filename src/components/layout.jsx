@@ -1,33 +1,109 @@
 import * as React from 'react'
+import { useState } from 'react'
 import { Link } from 'gatsby'
+import logo from '../images/logomissahbo.png';
+
 import {
     container,
     heading,
-    nanLinks,
+    dropdown,
+    navLinks,
     navLinkItem,
-    navLinkText
+    navLinkText,
+    dropdownContent,
+    navLinkDropdown,
+    navLinkSubmenu,
+    dropDownItem,
+    submenu,
+    containerNav,
+    logocss
 } from './layout.module.css'
 
 const Layout = ({ pageTitle, children }) => {
+
+    const [activeMenu, setActiveMenu] = useState(null);
+    const [dropdownActive, setDropdownActive] = useState(false);
+    
+
+
+    const navigation = [
+        { link: '/arquidiocese', text: 'Arquidiocese' },
+        { link: '/noticias', text: 'Notícias' },
+        { link: '/liturgia', text: 'Liturgia' },
+        { link: '/catequese', text: 'Catequese' },
+        { link: '/formcao', text: 'Formção' },
+        { link: '/contacto', text: 'Contacto' },
+        { link: '/sobrenos', text: 'Sobre Nós' },
+    ];
+
     return (
         <div className={container}>
-            <nav>
-                <ul className={nanLinks}>
-                    <li className={navLinkItem}><Link to="/" className={navLinkText}>Home</Link></li>
-                    <li className={navLinkItem}><Link to="/arquidiocese" className={navLinkText}>Arquidiocese</Link></li>
-                    <li className={navLinkItem}><Link to="/noticias" className={navLinkText}>Notícias</Link></li>
-                    <li className={navLinkItem}><Link to="/liturgia" className={navLinkText}>Liturgia</Link></li>
-                    <li className={navLinkItem}><Link to="/catequese" className={navLinkText}>Catequese</Link></li>
-                    <li className={navLinkItem}><Link to="/formacao" className={navLinkText}>Formação</Link></li>
-                    <li className={navLinkItem}><Link to="/contacto" className={navLinkText}>Contacto</Link></li>
-                    <li className={navLinkItem}><Link to="/sobrenos" className={navLinkText}>Sobre nós</Link></li>
+
+            <nav className={containerNav}>
+
+
+
+                <ul className={navLinks}>
+                    <Link to="/" >
+                        <img src={logo} alt="Logo" className={logocss} />
+                    </Link>
+                    {navigation.map((nav, index) => (
+
+
+                        <li key={nav.text} className={navLinkItem}>
+
+
+                            <div
+                                onMouseEnter={() => { setActiveMenu(index); setDropdownActive(true); }}
+                                onMouseLeave={() => { setActiveMenu(null); setDropdownActive(false); }}
+                                className={dropdown}
+
+                            >
+
+                                <Link to={nav.link} className={navLinkText}>
+                                    {nav.text}
+                                </Link>
+                                {activeMenu === index && nav.dropdown && dropdownActive && (
+                                    <ul
+                                        className={dropdownContent}
+                                        onMouseEnter={() => setDropdownActive(true)}
+                                        onMouseLeave={() => setDropdownActive(false)}
+                                    >
+                                        {nav.dropdown.map((item) => (
+                                            <li key={item.text} className={dropDownItem}>
+                                                <Link to={item.link} className={navLinkDropdown}>
+                                                    {item.text}
+                                                </Link>
+                                                {item.submenu && (
+                                                    <ul className={submenu}>
+                                                        {item.submenu.map((subitem) => (
+                                                            <li key={subitem.text}>
+                                                                <Link to={subitem.link} className={navLinkSubmenu}>
+                                                                    {subitem.text}
+                                                                </Link>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                )}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
+                        </li>
+                    ))}
                 </ul>
             </nav>
+
             <main>
                 <h1 className={heading}>{pageTitle}</h1>
                 {children}
             </main>
+
         </div>
+
+
+
     )
 }
 

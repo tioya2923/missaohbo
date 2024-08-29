@@ -3,7 +3,9 @@ import Layout from '../components/layout'
 
 const Catequese = () => {
     return (
-        <Layout pageTitle="Catequese"></Layout>  
+        <Layout pageTitle="Catequese">
+            <div>fhdhdsifliusfuhfiouhd</div>
+        </Layout>  
     )
 }
 export const Head = () => <title>Catequese</title>

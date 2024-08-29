@@ -6,9 +6,6 @@ const Liturgia = () => {
         <main>
             <Layout pageTitle="Liturgia"></Layout>  
          
-            <p>Meditação da Palavra</p>
-            <p>Cânticos</p>
-            <p>Orações</p>
           
          
         </main>

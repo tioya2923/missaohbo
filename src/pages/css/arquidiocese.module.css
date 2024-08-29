@@ -1,0 +1,101 @@
+/* src/pages/css/arquidiocese.module.css */
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centraliza verticalmente os itens */
+    padding: 20px;
+    background-color: #8a8eaa23;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 25px;
+   
+  }
+  
+  .h2 {
+    font-size: 1.2em;
+    color: #430e0e;
+    margin-bottom: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  
+  .image {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+  }
+  
+  div {
+    margin-bottom: 20px;
+  }
+  
+  .postContainer {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .titles {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+  
+  }
+  
+  .gatsby-image-wrapper {
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  p img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  div[dangerouslySetInnerHTML] {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+  }
+  

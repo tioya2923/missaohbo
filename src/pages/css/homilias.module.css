@@ -1,0 +1,64 @@
+/* noticias.module.css */
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 itens por linha */
+    gap: 10px;
+    padding: 10px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  
+  .gridItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    max-height: 400px;
+  }
+  
+  .gridItem:hover {
+    transform: scale(1.05);
+  }
+  
+  .gridItem a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .gridItem h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .gridItem p {
+    font-size: 1rem;
+  }
+  
+  .gridItem img {
+    width: 100%; /* Aumenta a largura */
+    height: 250px; /* Aumenta a altura */
+    object-fit: cover;
+    transition: transform 0.15s ease;
+  }
+  
+  .gridItem img:hover {
+    transform: scale(1.2);
+  }
+  
+  .datas {
+    color: #666;
+  }
+  
+  .textos {
+    color: black;
+    font-weight: 900;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+  }
+  

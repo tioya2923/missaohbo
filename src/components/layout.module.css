@@ -1,34 +1,122 @@
+
 .container {
-    margin: auto;
-   max-width: 800px;
+    margin: 0 auto;
+    max-width: auto;
     font-family: sans-serif;
-  
+    background-color: rgba(22, 21, 21, 0.183);
+    height: 90px;
+}
+
+
+
+.containerNav {
+    margin: 0 auto;
+    max-width: 1100px;
+    font-size: medium;
+    padding-top: 0.001%;
+
+
+
+
+}
+
+.logocss {
+    margin-right: 4rem;
+    height: 60px;
+    width: auto;
+
+}
+
+
+
+.navLinks {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    font-size: medium;
+
+}
+
+.navLinkItem {
+    padding-right: 2rem;
+    margin-top: 2%;
+
+
+}
+
+.navLinkText {
+    color: rgb(22, 22, 23);
+    text-decoration: none;
+    font-size: medium;
+    text-transform: uppercase;
+    cursor: pointer;
+
+
+}
+
+/* Corrigido para corresponder às classes do componente */
+.dropdown {
+    position: relative;
+    /* Posição relativa para o conteúdo absoluto do dropdown */
+    left: 0;
+}
+
+.dropdownContent {
+    display: none;
+    /* Esconde o conteúdo do dropdown inicialmente */
+    position: absolute;
+    /* Posicionamento absoluto para sobrepor outros elementos */
+    background-color: hwb(0 91% 8%);
+    /* Cor de fundo do dropdown */
+    min-width: 160px;
+    /* Largura mínima do dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* Sombra para o dropdown */
+    z-index: 1;
+    /* Garante que o dropdown fique acima de outros elementos */
+    list-style-type: none;
+}
+
+.dropDownItem {
+    color: red;
+    left: 0;
+}
+
+.navLinkItem:hover .dropdownContent {
+    display: block;
+    /* Mostra o conteúdo do dropdown quando passa o mouse */
+}
+
+/* Classes para submenu */
+.submenu {
+    display: none;
+    /* Esconde o submenu inicialmente */
+}
+
+.dropdownItem:hover .submenu {
+    display: block;
+    /* Mostra o submenu quando passa o mouse no item do dropdown */
+}
+
+.navLinkDropdown,
+.navLinkSubmenu {
+    color: black;
+    /* Cor do texto dos links do dropdown e submenu */
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
+    display: block;
+    /* Exibe os links em blocos para preencher o espaço do dropdown/submenu */
+    padding: 12px 16px;
+    /* Espaçamento interno para os links */
+}
+
+.navLinkSubmenu {
+    padding-left: 32px;
+    /* Espaçamento adicional para itens do submenu */
 }
 
 .heading {
     color: rebeccapurple;
 }
-
-.nanLinks {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
-    
-    
-}
-
-.navLinkItem {
-    padding-right: 2rem;
-    
-  
-}
-
-.navLinkText {
-    color: black;
-    text-decoration: none;
-    font-size: medium;
-}
-
-
 
 

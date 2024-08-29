@@ -3,12 +3,13 @@ import Layout from '../components/layout'
 
 const Sobrenos = () => {
     return (
-        <main>
+       <Layout pageTitle="Sobre nós"> 
+       <main>
             
-           <Layout pageTitle="Sobre nós"></Layout>  
            
+           <div>fdgljkdfjgogodghodfohgoidoigodifgjoidjgjhgofdjogidfjiogjdfiogj</div>
                    
-        </main>
+        </main></Layout> 
     )
 }
 export const Head = () => <title>Sobre nós</title>
