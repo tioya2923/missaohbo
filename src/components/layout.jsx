@@ -31,7 +31,7 @@ const Layout = ({ pageTitle, children }) => {
         { link: '/noticias', text: 'Notícias' },
         { link: '/liturgia', text: 'Liturgia' },
         { link: '/catequese', text: 'Catequese' },
-        { link: '/formcao', text: 'Formção' },
+        { link: '/formacao', text: 'Formação' },
         { link: '/contacto', text: 'Contacto' },
         { link: '/sobrenos', text: 'Sobre Nós' },
     ];

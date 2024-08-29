@@ -4,17 +4,16 @@ import { Link, graphql } from 'gatsby';
 import Seo from '../components/seo';
 import * as styles from './css/lists.module.css';
 
-const Clero = ({ data }) => {
+const Movimentos = ({ data }) => {
   return (
-    <Layout pageTitle="Clero">
-      <Seo title="Clero" />
+    <Layout pageTitle="Movimentos de Apostolado e Associações Cristãs">
+      <Seo title="Movimentos de Apostolado e Associações Cristãs" />
       <div className={styles.gridContainer}>
-        {data.allWpClero.nodes.map((node) => {
-
+        {data.allWpMovimento.nodes.map((node) => {
           return (
             <div key={node.id} className={styles.gridItem}>
               <h2>
-                <Link to={`/clRigos/${node.slug}`}>
+                <Link to={`/movimentos/${node.slug}`}>
                   <div className={styles.aboutHomilia}>
                     <p className={styles.textos}>{node.title}</p>
                   </div>
@@ -31,7 +30,7 @@ const Clero = ({ data }) => {
 
 export const query = graphql`
   query {
-    allWpClero(sort: { fields: title, order: ASC }) {
+    allWpMovimento(sort: { fields: title, order: ASC }) {
       nodes {
         id
         slug
@@ -52,6 +51,5 @@ export const query = graphql`
   }
 `;
 
-
-export const Head = () => <Seo title="Clero" />;
-export default Clero;
+export const Head = () => <Seo title="Movimentos" />;
+export default Movimentos;

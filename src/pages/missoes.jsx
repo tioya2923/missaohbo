@@ -2,7 +2,7 @@ import * as React from 'react';
 import Layout from '../components/layout';
 import { Link, graphql } from 'gatsby';
 import Seo from '../components/seo';
-import * as styles from './css/homilias.module.css';
+import * as styles from './css/lists.module.css';
 
 const Missoes = ({ data }) => {
   return (

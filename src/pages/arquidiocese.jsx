@@ -27,8 +27,8 @@ const Arquidiocese = () => {
           <img src={arcebispo} className={styles.image} alt="Arcebispo" />
         </div>
         <div className={styles.content}>
-          <Link to="/biografia/biografia-arcebispo"><h2 className={styles.h2}>Biografia</h2></Link>
-          <Link to="/armas/armas-arcebispo"><h2 className={styles.h2}>Armas</h2></Link>
+          <Link to="#/biografia/biografia-arcebispo"><h2 className={styles.h2}>Biografia</h2></Link>
+          <Link to="#/armas/armas-arcebispo"><h2 className={styles.h2}>Armas</h2></Link>
           <Link to="/homilias"><h2 className={styles.h2}>Homilias</h2></Link>          
           <Link to="/cartasPastorais"><h2 className={styles.h2}>Cartas pastorais</h2></Link>          
         </div>
@@ -40,8 +40,8 @@ const Arquidiocese = () => {
           <img src={bispoemerito} className={styles.image} alt="Bispo Emérito" />
         </div>
         <div className={styles.content}>
-          <Link to="/biografia/biografia-bispo-emerito"><h2 className={styles.h2}>Biografia</h2></Link>
-          <Link to="/armas/armas-bispo-emerito"><h2 className={styles.h2}>Armas</h2></Link>
+          <Link to="#/biografia/biografia-bispo-emerito"><h2 className={styles.h2}>Biografia</h2></Link>
+          <Link to="#/armas/armas-bispo-emerito"><h2 className={styles.h2}>Armas</h2></Link>
         </div>
       </section>
 
@@ -61,10 +61,10 @@ const Arquidiocese = () => {
           <img src={seminarios} className={styles.image} alt="Seminários" />
         </div>
         <div className={styles.content}>
-          <Link to="/seminarios/seminario-menor"><h2 className={styles.h2}>Seminário Menor de Nossa Senhora das Mercês</h2></Link>
-          <Link to="/seminarios/seminario-propedeutico"><h2 className={styles.h2}>Semninário Propedêutico São João Evangelista</h2></Link>
-          <Link to="/seminarios/seminario-maior-filosofia"><h2 className={styles.h2}>Seminário Maior de Cristo Rei, Secção de Filosofia</h2></Link>
-          <Link to="/seminarios/seminario-maior-teologia"><h2 className={styles.h2}>Seminário Maior de Cristo Rei, Secção de Teologia</h2></Link>
+          <Link to="#/seminarios/seminario-menor"><h2 className={styles.h2}>Seminário Menor de Nossa Senhora das Mercês</h2></Link>
+          <Link to="#/seminarios/seminario-propedeutico"><h2 className={styles.h2}>Semninário Propedêutico São João Evangelista</h2></Link>
+          <Link to="#/seminarios/seminario-maior-filosofia"><h2 className={styles.h2}>Seminário Maior de Cristo Rei, Secção de Filosofia</h2></Link>
+          <Link to="#/seminarios/seminario-maior-teologia"><h2 className={styles.h2}>Seminário Maior de Cristo Rei, Secção de Teologia</h2></Link>
         </div>
       </section>
 
@@ -74,10 +74,10 @@ const Arquidiocese = () => {
           <img src={vigararias} className={styles.image} alt="Vigararias" />
         </div>
         <div className={styles.content}>
-          <Link to="/vigararias/vigararia-sede"><h2 className={styles.h2}>Vigararia da Sede</h2></Link>
-          <Link to="/vigararias/vigararia-caala"><h2 className={styles.h2}>Vigaraia da Caála</h2></Link>
-          <Link to="/vigararias/vigararia-katchiungo"><h2 className={styles.h2}>Vigaria do Katchiungo</h2></Link>
-          <Link to="/vigararias/vigararia-bailundo"><h2 className={styles.h2}>Vigararia do Bailundo</h2></Link>
+          <Link to="#/vigararias/vigararia-sede"><h2 className={styles.h2}>Vigararia da Sede</h2></Link>
+          <Link to="#/vigararias/vigararia-caala"><h2 className={styles.h2}>Vigaraia da Caála</h2></Link>
+          <Link to="#/vigararias/vigararia-katchiungo"><h2 className={styles.h2}>Vigaria do Katchiungo</h2></Link>
+          <Link to="#/vigararias/vigararia-bailundo"><h2 className={styles.h2}>Vigararia do Bailundo</h2></Link>
         </div>
       </section>
 
@@ -107,7 +107,7 @@ const Arquidiocese = () => {
           <img src={comunidades} className={styles.image} alt="Vida Cristã" />
         </div>
         <div className={styles.content}>
-          <Link to="/vida-crista/comunidades-religiosas"><h2 className={styles.h2}>Comunidades Religiosas e Institutos Religiosos presentes na Arquidiose do Huambo</h2></Link>
+          <Link to="/comunidades"><h2 className={styles.h2}>Comunidades Religiosas e Institutos Religiosos presentes na Arquidiose do Huambo</h2></Link>
         </div>
       </section>
 
@@ -117,7 +117,7 @@ const Arquidiocese = () => {
           <img src={movimentos} className={styles.image} alt="Associações e Movimentos" />
         </div>
         <div className={styles.content}>
-          <Link to="/associacoes-movimentos/movimentos-apostolado"><h2 className={styles.h2}>Movimentos de Apostolado e Associações presentes na Arquidiose do Huambo</h2></Link>
+          <Link to="/movimentos"><h2 className={styles.h2}>Movimentos de Apostolado e Associações presentes na Arquidiose do Huambo</h2></Link>
         </div>
       </section>
 
@@ -127,7 +127,7 @@ const Arquidiocese = () => {
           <img src={escolas} className={styles.image} alt="Escolas Católicas" />
         </div>
         <div className={styles.content}>
-          <Link to="/escolas/escolas-catolicas"><h2 className={styles.h2}>Escolas Católicas da Arquidiose do Huambo</h2></Link>
+          <Link to="/escolas"><h2 className={styles.h2}>Escolas Católicas da Arquidiose do Huambo</h2></Link>
         </div>
       </section>
 
@@ -137,7 +137,7 @@ const Arquidiocese = () => {
           <img src={historia} className={styles.image} alt="História" />
         </div>
         <div className={styles.content}>
-          <Link to="/historia/historia-arquidiocese"><h2 className={styles.h2}>História da Arquidiose do Huambo</h2></Link>
+          <Link to="#/historia"><h2 className={styles.h2}>História da Arquidiose do Huambo</h2></Link>
         </div>
       </section>
     </Layout>

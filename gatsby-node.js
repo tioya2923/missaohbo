@@ -216,6 +216,121 @@ exports.createPages = async ({ graphql, actions }) => {
 
 
 
+
+
+  // Criar páginas para Comunidades
+  const resultComunidades = await graphql(`
+    {
+      allWpComunidade {
+        nodes {
+          id
+          slug
+        }
+      }
+    }
+  `);
+
+  if (resultComunidades.errors) {
+    throw resultComunidades.errors;
+  }
+
+  const comunidades = resultComunidades.data.allWpComunidade.nodes;
+
+  comunidades.forEach((comunidade) => {
+    createPage({
+      path: `/comunidades/${comunidade.slug}`,
+      component: path.resolve(`./src/templates/comunidade.js`),
+      context: {
+        id: comunidade.id,
+      },
+    });
+  });
+
+  // Criar página para Comunidades
+  createPage({
+    path: `/comunidades`,
+    component: path.resolve(`./src/pages/comunidades.jsx`),
+  });
+
+
+
+
+
+  // Criar páginas para os Movimentos
+  const resultMovimentos = await graphql(`
+    {
+      allWpMovimento {
+        nodes {
+          id
+          slug
+        }
+      }
+    }
+  `);
+
+  if (resultMovimentos.errors) {
+    throw resultMovimentos.errors;
+  }
+
+  const movimentos = resultMovimentos.data.allWpMovimento.nodes;
+
+  movimentos.forEach((movimento) => {
+    createPage({
+      path: `/movimentos/${movimento.slug}`,
+      component: path.resolve(`./src/templates/movimento.js`),
+      context: {
+        id: movimento.id,
+      },
+    });
+  });
+
+  // Criar página para Movimentos
+  createPage({
+    path: `/movimentos`,
+    component: path.resolve(`./src/pages/movimentos.jsx`),
+  });
+
+
+
+
+  // Criar páginas para as Escolas
+  const resultEscolas = await graphql(`
+    {
+      allWpEscola{
+        nodes {
+          id
+          slug
+        }
+      }
+    }
+  `);
+
+  if (resultEscolas.errors) {
+    throw resultEscolas.errors;
+  }
+
+  const escolas = resultEscolas.data.allWpEscola.nodes;
+
+  escolas.forEach((escola) => {
+    createPage({
+      path: `/escolas/${escola.slug}`,
+      component: path.resolve(`./src/templates/escola.js`),
+      context: {
+        id: escola.id,
+      },
+    });
+  });
+
+  // Criar página para Esolas
+  createPage({
+    path: `/escolas`,
+    component: path.resolve(`./src/pages/escolas.jsx`),
+  });
+
+
+
+
+
 };
 
 

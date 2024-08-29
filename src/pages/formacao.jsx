@@ -4,11 +4,16 @@ import Layout from '../components/layout'
 const Formacao = () => {
     return (
         <main>
-             <Layout pageTitle="Formação"></Layout> 
-           
-            <p>Artigos</p>
-            
-       
+            <Layout pageTitle="Formação">
+
+                <div>
+                    <p>Artigos</p>
+                </div>
+            </Layout>
+
+
+
+
         </main>
     )
 }

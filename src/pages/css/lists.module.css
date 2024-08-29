@@ -1,0 +1,52 @@
+/* noticias.module.css */
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Ajusta automaticamente para 3 ou 4 colunas */
+  gap: 0px 10px;
+  padding: 1px;
+  max-width: 1300px;
+  margin: 0 auto;
+  
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  max-height: 70px;
+}
+
+.gridItem:hover {
+  transform: scale(1.05);
+}
+
+.gridItem a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.gridItem h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.gridItem p {
+  font-size: 1rem;
+}
+
+.datas {
+  color: #666;
+}
+
+.textos {
+  color: black;
+  margin-top: 35px;
+  font-weight: 900;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
